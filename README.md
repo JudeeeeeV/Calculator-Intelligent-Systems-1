@@ -10,6 +10,7 @@ It was created as part of the **Intelligent Systems 1** course assignment.
 - Clear Entry (CE) and Clear (C) functions  
 - Decimal point support  
 - Continuable calculations (perform operations one after another without resetting)  
+- Negation (±) support  
 - User-friendly interface with clickable buttons  
 
 ## How to Run
