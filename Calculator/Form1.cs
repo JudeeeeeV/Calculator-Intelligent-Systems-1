@@ -137,8 +137,8 @@ namespace Calculator
 
                 if (!double.IsNaN(input1))
                 {
-                    label.Text = input1.ToString() + $" {oper}";
-
+                    label.Text = input1.ToString("0.######") + $" {oper}";
+                    
                     currentInput = 0;
                     textbox.Text = "0";
                     operation = $"{oper}";
@@ -150,12 +150,12 @@ namespace Calculator
                 }
             }
 
-        
+
             if (operation == "")
             {
                 if (input1 == 0) input1 = currentInput;
 
-                label.Text = input1.ToString() + $" {oper}";
+                label.Text = input1.ToString("0.######") + $" {oper}";
                 textbox.Text = "0";
                 operation = $"{oper}";
             }
@@ -187,8 +187,8 @@ namespace Calculator
 
                 if (!double.IsNaN(input1))
                 {
-                    textbox.Text = input1.ToString(); 
-                    label.Text = ""; 
+                    textbox.Text = input1.ToString("0.######");
+                    label.Text = "";
 
                     currentInput = 0;
                     operation = "";
@@ -250,5 +250,18 @@ namespace Calculator
                 currentInput = value;
             }
         }
+
+        private void button_backspace_Click(object sender, EventArgs e)
+        {
+            if (textbox.Text != "ERROR" && textbox.Text.Length > 0)
+            {
+                textbox.Text = textbox.Text.Remove(textbox.Text.Length - 1, 1);
+                if (textbox.Text == "")
+                    textbox.Text = "0";
+                currentInput = Convert.ToDouble(textbox.Text);
+            }
+        }
+
+     
     }
 }
