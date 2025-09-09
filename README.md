@@ -2,6 +2,8 @@
 
 This is a simple Windows Forms calculator application built with C#.
 
+It was created as part of the **Intelligent Systems 1** course assignment.
+
 ## How to Run
 
 1. Download or clone this repository.  
