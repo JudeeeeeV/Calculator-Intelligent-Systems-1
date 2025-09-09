@@ -2,7 +2,7 @@
 
 This is a simple Windows Forms calculator application built with C#.
 
-It was created as part of the **Intelligent Systems 1** course assignment.
+It was created as part of the **Intelligent Systems 1** course assignment and is inspired by the **Windows 11 Calculator**.
 
 ## Features
 
