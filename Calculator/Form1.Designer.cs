@@ -50,6 +50,7 @@
             this.button_decimal = new System.Windows.Forms.Button();
             this.button_zero = new System.Windows.Forms.Button();
             this.button_negate = new System.Windows.Forms.Button();
+            this.button_backspace = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textbox
@@ -88,7 +89,7 @@
             this.button_ce.ForeColor = System.Drawing.Color.White;
             this.button_ce.Location = new System.Drawing.Point(11, 110);
             this.button_ce.Name = "button_ce";
-            this.button_ce.Size = new System.Drawing.Size(152, 56);
+            this.button_ce.Size = new System.Drawing.Size(73, 56);
             this.button_ce.TabIndex = 2;
             this.button_ce.Text = "CE";
             this.button_ce.UseVisualStyleBackColor = false;
@@ -101,7 +102,7 @@
             this.button_c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_c.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_c.ForeColor = System.Drawing.Color.White;
-            this.button_c.Location = new System.Drawing.Point(168, 110);
+            this.button_c.Location = new System.Drawing.Point(90, 110);
             this.button_c.Name = "button_c";
             this.button_c.Size = new System.Drawing.Size(73, 56);
             this.button_c.TabIndex = 3;
@@ -147,7 +148,7 @@
             this.button_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_minus.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_minus.ForeColor = System.Drawing.Color.White;
-            this.button_minus.Location = new System.Drawing.Point(246, 234);
+            this.button_minus.Location = new System.Drawing.Point(245, 234);
             this.button_minus.Name = "button_minus";
             this.button_minus.Size = new System.Drawing.Size(73, 56);
             this.button_minus.TabIndex = 6;
@@ -282,7 +283,7 @@
             this.button_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_3.ForeColor = System.Drawing.Color.White;
-            this.button_3.Location = new System.Drawing.Point(169, 296);
+            this.button_3.Location = new System.Drawing.Point(168, 296);
             this.button_3.Name = "button_3";
             this.button_3.Size = new System.Drawing.Size(73, 56);
             this.button_3.TabIndex = 16;
@@ -365,12 +366,28 @@
             this.button_negate.UseVisualStyleBackColor = false;
             this.button_negate.Click += new System.EventHandler(this.button_negate_Click);
             // 
+            // button_backspace
+            // 
+            this.button_backspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button_backspace.FlatAppearance.BorderSize = 0;
+            this.button_backspace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_backspace.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_backspace.ForeColor = System.Drawing.Color.White;
+            this.button_backspace.Location = new System.Drawing.Point(168, 110);
+            this.button_backspace.Name = "button_backspace";
+            this.button_backspace.Size = new System.Drawing.Size(73, 56);
+            this.button_backspace.TabIndex = 22;
+            this.button_backspace.Text = "<";
+            this.button_backspace.UseVisualStyleBackColor = false;
+            this.button_backspace.Click += new System.EventHandler(this.button_backspace_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(329, 424);
+            this.Controls.Add(this.button_backspace);
             this.Controls.Add(this.button_negate);
             this.Controls.Add(this.button_zero);
             this.Controls.Add(this.button_decimal);
@@ -393,7 +410,8 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.textbox);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(350, 463);
+            this.MaximumSize = new System.Drawing.Size(345, 463);
+            this.MinimumSize = new System.Drawing.Size(345, 463);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -426,6 +444,7 @@
         private System.Windows.Forms.Button button_decimal;
         private System.Windows.Forms.Button button_zero;
         private System.Windows.Forms.Button button_negate;
+        private System.Windows.Forms.Button button_backspace;
     }
 }
 
